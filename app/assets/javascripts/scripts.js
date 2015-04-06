@@ -1,16 +1,16 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).ready(function () {
-	/*$("form").validate({
+/*$(document).ready(function () {
+	$("form").validate({
 		debug: true,
 		rules: {
 			"user[email]": {required: true, email: true},
 			"user[password]": {required: true, minlength: 6},
 			"user[password_confirmation]": {required: true, equalTo: "#user_password"}
 		}
-	});*/
-});
+	});
+});*/
 
 function validateNumber(event) {
     var key = window.event ? event.keyCode : event.which;

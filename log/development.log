@@ -21474,3 +21474,69 @@ Started GET "/assets/edit.png" for 127.0.0.1 at 2015-04-06 03:01:47 -0300
 
 
 Started GET "/assets/del.png" for 127.0.0.1 at 2015-04-06 03:01:47 -0300
+
+
+Started GET "/ordens" for 127.0.0.1 at 2015-04-06 13:40:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by OrdensController#index as HTML
+  [1m[35mOrdens Load (0.3ms)[0m  SELECT "ordens".* FROM "ordens"
+  Rendered ordens/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 1057ms (Views: 1039.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/styles-302ab3f938f498c9326c0d8130788fcd.css?body=1" for 127.0.0.1 at 2015-04-06 13:40:19 -0300
+
+
+Started GET "/assets/application-009eb8cf45fd9ad500f6988f5d5e4b7c.css?body=1" for 127.0.0.1 at 2015-04-06 13:40:19 -0300
+
+
+Started GET "/assets/del.png" for 127.0.0.1 at 2015-04-06 13:40:19 -0300
+
+
+Started GET "/assets/show.png" for 127.0.0.1 at 2015-04-06 13:40:19 -0300
+
+
+Started GET "/assets/edit.png" for 127.0.0.1 at 2015-04-06 13:40:19 -0300
+
+
+Started GET "/ordens/new" for 127.0.0.1 at 2015-04-06 13:40:22 -0300
+Processing by OrdensController#new as HTML
+  Rendered ordens/new.html.erb within layouts/application (68.2ms)
+Completed 200 OK in 141ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ordens" for 127.0.0.1 at 2015-04-06 13:40:23 -0300
+Processing by OrdensController#index as HTML
+  [1m[36mOrdens Load (0.3ms)[0m  [1mSELECT "ordens".* FROM "ordens"[0m
+  Rendered ordens/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ordens/5/edit" for 127.0.0.1 at 2015-04-06 13:40:26 -0300
+Processing by OrdensController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOrdens Load (0.3ms)[0m  SELECT  "ordens".* FROM "ordens" WHERE "ordens"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered ordens/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 88ms (Views: 71.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ordens" for 127.0.0.1 at 2015-04-06 13:40:27 -0300
+Processing by OrdensController#index as HTML
+  [1m[36mOrdens Load (0.3ms)[0m  [1mSELECT "ordens".* FROM "ordens"[0m
+  Rendered ordens/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/ordens/5" for 127.0.0.1 at 2015-04-06 13:40:29 -0300
+Processing by OrdensController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mOrdens Load (0.1ms)[0m  SELECT  "ordens".* FROM "ordens" WHERE "ordens"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered ordens/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/ordens" for 127.0.0.1 at 2015-04-06 13:40:30 -0300
+Processing by OrdensController#index as HTML
+  [1m[36mOrdens Load (0.4ms)[0m  [1mSELECT "ordens".* FROM "ordens"[0m
+  Rendered ordens/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 86ms (Views: 85.5ms | ActiveRecord: 0.4ms)

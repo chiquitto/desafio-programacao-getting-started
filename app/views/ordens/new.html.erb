@@ -1,6 +1,6 @@
 <h1>Inserção de Ordens de Vendas</h1>
 <div class="form">
-	<%= form_for :ordem, :html => { :onsubmit =>'return checkForm(this);' }, url: ordens_path do |f| %>
+	<%= form_for :ordem, url: ordens_path do |f| %>
 		<% if @ordem.errors.any? %>
 			<div id="error_explanation">
 			  <ul>

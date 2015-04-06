@@ -1,6 +1,6 @@
 <h1>Edição de Ordens de Vendas</h1>
 <div class="form">
-	<%= form_for :ordem, :html => { :onsubmit =>'return checkForm(this);' }, url: orden_path(@ordem), method: :patch do |f| %>
+	<%= form_for :ordem, url: orden_path(@ordem), method: :patch do |f| %>
 		<% if @ordem.errors.any? %>
 			<div id="error_explanation">
 			  <ul>
