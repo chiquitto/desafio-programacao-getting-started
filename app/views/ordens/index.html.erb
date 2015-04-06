@@ -1,0 +1,39 @@
+<div id="showall">
+
+	<h1>Todas ordens de venda</h1>
+	 
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Nome do comprador</th>
+				<th>Valor do item</th>
+				<th>Quantidade</th>
+				<th>Descrição do item</th>
+				<th>Nome do vendedor</th>
+				<th>Endereço do vendedor</th>
+				<th>Ver</th>
+				<th>Editar</th>
+				<th>Deletar</th>
+			</tr>
+	 	</thead>
+		<% @ordens.each do |ordem| %>
+		<tbody>
+			<tr>
+				<td><%= ordem.id %></td>
+				<td><%= ordem.nome_do_comprador %></td>
+				<td><%= ordem.valor_do_item %></td>
+				<td><%= ordem.quantidade %></td>
+				<td><%= ordem.descricao_do_item %></td>
+				<td><%= ordem.nome_do_vendedor %></td>
+				<td><%= ordem.endereco_do_vendedor %></td>
+				<td><%= link_to "", orden_path(ordem), class: "show" %></td>
+				<td><%= link_to "", edit_orden_path(ordem), class: "edit" %></td>
+				<td><%= link_to "", orden_path(ordem),
+		              method: :delete,
+		              data: { confirm: 'Tem certeza que deseja deletar este item?' }, class: "del" %></td>
+			</tr>
+		</tbody>
+	<% end %>
+	</table>
+</div>

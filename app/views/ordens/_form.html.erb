@@ -1,0 +1,46 @@
+<%= form_for @ordem, :html => { :onsubmit =>'return checkForm(this);' } do |f| %>
+	<% if @ordem.errors.any? %>
+		<div id="error_explanation">
+		  <ul>
+		    <% @ordem.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		  </ul>
+		</div>
+	<% end %>
+
+	<%= f.label :nome_do_comprador %> *
+	<div class="input-group">
+		<%= f.text_field :nome_do_comprador, class: "form-control", placeholder: "João Souza Aquin", :required => true, :pattern => '[a-zA-Z]+.{2}', title: "Apenas letras com o mínimo de 3 carácteres." %>
+	</div> 
+
+	<%= f.label :valor_do_item %> *
+	<div class="input-group">
+		<div class="input-group-addon">R$</div>
+		<%= f.text_field :valor_do_item, class: "form-control", placeholder: "500.50", :required => true, :pattern => '[-+]?[0-9]*[.]?[0-9]+', title: "Apenas números, ultilize PONTO e não VÍRGULA." %>
+	</div>
+
+	<%= f.label :quantidade %> *
+	<div class="input-group">
+		<%= f.text_field :quantidade, class: "form-control", type: "number", min: "1", placeholder: "300", onkeypress: 'return validateNumber(event);', :required => true, :pattern => '[0-9],{1,}', title: "Apenas números maiores do que ZERO." %>
+	</div>
+
+	<%= f.label :descricao_do_item %> *
+	<div class="input-group">
+		<%= f.text_area :descricao_do_item, class: "form-control", placeholder: "Pen-drive azul, pesando 50g.", :required => true, title: "Preencha corretamente." %>
+	</div>
+
+	<br>
+
+	<%= f.label :nome_do_vendedor %> *
+	<div class="input-group">
+		<%= f.text_field :nome_do_vendedor, class: "form-control", placeholder: "Samara da Silva", :required => true, :pattern => '[a-zA-Z]+.{2}', ttitle: "Apenas letras com o mínimo de 3 carácteres." %>
+	</div>
+
+	<%= f.label :endereco_do_vendedor %> *
+	<div class="input-group">
+		<%= f.text_field :endereco_do_vendedor, class: "form-control", placeholder: "Bairro Cruzeiro, Rua Luiz Michelon, 571", :required => true, :pattern => '.{3,}', title: "Minímo de 3 carácteres." %>
+	</div>
+
+	<%= f.submit :Enviar, class: "btn btn-primary" %>
+<% end %>
